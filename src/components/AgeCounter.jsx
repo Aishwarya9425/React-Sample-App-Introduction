@@ -6,7 +6,7 @@ export function AgeCounter(props) {
 
   const [age, setAge] = useState(28);
 
- // setAge(age); --> dont use setState directly inside the component body else it will result in infinite rendering loop
+  // setAge(age); --> dont use setState directly inside the component body else it will result in infinite rendering loop
 
   function increaseAge() {
     setAge(age + 1); //is asynchronous..will take some time to see the updated value
@@ -14,7 +14,7 @@ export function AgeCounter(props) {
 
   console.log("Updated value", age);
   return (
-    <div>
+    <div style={{ height: 100, width: 500 }}>
       <button onClick={increaseAge}>Click here to increase the age</button>
       <p>You are {age} years old!!</p>
     </div>
